@@ -50,16 +50,13 @@ jobs:
         run: pnpm run test run
 
       - name: Test (vue)
-        run: pnpm run test:vue run
+        run: pnpm run test
 
       - name: Build
         run: pnpm run build
 
       - name: Build playground
         run: pnpm run dev:build
-
-      - name: Build playground (vue)
-        run: pnpm run dev:vue:build
 
       - name: Publish
         run: pnpx pkg-pr-new publish --compact --no-template --pnpm
