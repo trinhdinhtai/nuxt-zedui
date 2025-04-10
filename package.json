@@ -1,6 +1,6 @@
 {
-  "name": "zed-ui",
-  "version": "0.0.2",
+  "name": "@trinhdinhtai/zed-ui",
+  "version": "0.0.3",
   "description": "My new Nuxt module",
   "repository": "trinhdinhtai/nuxt-zedui",
   "license": "MIT",
