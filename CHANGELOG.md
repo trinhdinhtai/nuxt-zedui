@@ -1,5 +1,6 @@
 # Changelog
 
+## [0.0.5](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.4...v0.0.5) (2025-04-10)
 
 ## v0.0.4
 
@@ -19,4 +20,3 @@
 ### ❤️ Contributors
 
 - Trinhdinhtai ([@trinhdinhtai](https://github.com/trinhdinhtai))
-
