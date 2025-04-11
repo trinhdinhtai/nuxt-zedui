@@ -1,7 +1,8 @@
 <template>
   <div>
     Nuxt module playground!
-    <BaseButton />
+    <ZButton />
+    <button class="bg-blue-700 cursor-pointer">Test</button>
   </div>
 </template>
 
