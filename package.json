@@ -16,11 +16,13 @@
   "typesVersions": {
     "*": {
       ".": [
-        "./dist/types.d.mts"
+        "./dist/module.d.mts"
       ]
     }
   },
   "files": [
+    ".nuxt/ui",
+    ".nuxt/ui.css",
     "dist"
   ],
   "scripts": {
