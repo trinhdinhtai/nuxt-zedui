@@ -7,9 +7,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types.d.mts",
-      "import": "./dist/module.mjs",
-      "style": "./dist/runtime/index.css"
+      "types": "./dist/module.d.mts",
+      "style": "./dist/runtime/index.css",
+      "import": "./dist/module.mjs"
     }
   },
   "main": "./dist/module.mjs",
