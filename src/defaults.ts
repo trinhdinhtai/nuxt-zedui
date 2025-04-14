@@ -5,6 +5,8 @@ export const defaultOptions = {
 };
 
 export const getDefaultUiConfig = (colors?: string[]) => ({
+  prefix: 'Z',
+  fonts: true,
   colors: pick(
     {
       primary: 'green',

@@ -5,10 +5,13 @@ import {
   createResolver,
   addComponentsDir,
   addVitePlugin,
+  installModule,
+  hasNuxtModule,
 } from '@nuxt/kit';
 import { name, version } from '../package.json';
 import { defaultOptions, getDefaultUiConfig } from './defaults';
 import { addTemplates } from './templates';
+import type { NuxtOptions } from 'nuxt/schema';
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -18,6 +21,13 @@ export interface ModuleOptions {
    * @link https://ui.nuxt.com/getting-started/installation/nuxt#prefix
    */
   prefix?: string;
+
+  /**
+   * Enable or disable `@nuxt/fonts` module
+   * @defaultValue `true`
+   * @link https://ui.nuxt.com/getting-started/installation/nuxt#fonts
+   */
+  fonts?: boolean;
 
   /**
    * Customize how the theme is generated
@@ -38,6 +48,19 @@ export interface ModuleOptions {
      */
     transitions?: boolean;
   };
+}
+
+async function registerModule(
+  name: string,
+  key: string,
+  options: Record<string, any>,
+  nuxtOptions: NuxtOptions
+) {
+  if (!hasNuxtModule(name)) {
+    await installModule(name, options);
+  } else {
+    (nuxtOptions as any)[key] = defu((nuxtOptions as any)[key], options);
+  }
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -75,6 +98,18 @@ export default defineNuxtModule<ModuleOptions>({
       addVitePlugin(plugin());
     } else {
       nuxt.options.postcss.plugins['@tailwindcss/postcss'] = {};
+    }
+
+    // Cài đặt module @nuxt/fonts
+    if (options.fonts) {
+      await registerModule(
+        '@nuxt/fonts',
+        'fonts',
+        {
+          experimental: { processCSSVariables: true },
+        },
+        nuxt.options
+      );
     }
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
