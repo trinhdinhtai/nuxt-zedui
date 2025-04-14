@@ -10,13 +10,17 @@
       "types": "./dist/module.d.mts",
       "style": "./dist/runtime/index.css",
       "import": "./dist/module.mjs"
-    }
+    },
+    "./components/*": "./dist/runtime/components/*"
   },
   "main": "./dist/module.mjs",
   "typesVersions": {
     "*": {
       ".": [
         "./dist/module.d.mts"
+      ],
+      "components/*": [
+        "./dist/runtime/components/*"
       ]
     }
   },

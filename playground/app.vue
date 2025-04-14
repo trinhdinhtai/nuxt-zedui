@@ -5,13 +5,11 @@
     <div>
       <h2 class="text-lg font-bold mb-2">Module Buttons</h2>
       <div class="flex gap-2">
-        <ZButton $dynamic-slots>Default Button</ZButton>
-        <ZButton variant="outline" $dynamic-slots>Outline Button</ZButton>
-        <ZButton variant="destructive" $dynamic-slots
-          >Destructive Button</ZButton
-        >
-        <ZButton variant="ghost" $dynamic-slots>Ghost Button</ZButton>
-        <ZButton variant="link" $dynamic-slots>Link Button</ZButton>
+        <ZButton>Default Button</ZButton>
+        <ZButton variant="outline">Outline Button</ZButton>
+        <ZButton variant="destructive">Destructive Button</ZButton>
+        <ZButton variant="ghost">Ghost Button</ZButton>
+        <ZButton variant="link">Link Button</ZButton>
       </div>
     </div>
   </div>
