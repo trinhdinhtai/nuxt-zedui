@@ -2,11 +2,10 @@ import { pick } from './runtime/utils';
 
 export const defaultOptions = {
   prefix: 'Z',
+  fonts: true,
 };
 
 export const getDefaultUiConfig = (colors?: string[]) => ({
-  prefix: 'Z',
-  fonts: true,
   colors: pick(
     {
       primary: 'green',
