@@ -66,24 +66,24 @@ export function getTemplates(
           });
         }
 
-        // For local development, import directly from theme
-        // const isUiDev = true;
-        // if (isUiDev) {
-        //   const templatePath = fileURLToPath(
-        //     new URL(`./theme/${kebabCase(component)}`, import.meta.url)
-        //   );
-        //   return [
-        //     `import template from ${JSON.stringify(templatePath)}`,
-        //     ...generateVariantDeclarations(variants),
-        //     `const result = typeof template === 'function' ? (template as Function)(${JSON.stringify(
-        //       options,
-        //       null,
-        //       2
-        //     )}) : template`,
-        //     `const theme = ${json}`,
-        //     `export default result as typeof theme`,
-        //   ].join('\n\n');
-        // }
+        For local development, import directly from theme
+        const isUiDev = true;
+        if (isUiDev) {
+          const templatePath = fileURLToPath(
+            new URL(`./theme/${kebabCase(component)}`, import.meta.url)
+          );
+          return [
+            `import template from ${JSON.stringify(templatePath)}`,
+            ...generateVariantDeclarations(variants),
+            `const result = typeof template === 'function' ? (template as Function)(${JSON.stringify(
+              options,
+              null,
+              2
+            )}) : template`,
+            `const theme = ${json}`,
+            `export default result as typeof theme`,
+          ].join('\n\n');
+        }
 
         // For production build
         return [
