@@ -2,6 +2,7 @@
 
 <template>
   <ZSidebarProvider default-open>
+    <AppSidebar />
     <ZSidebarInset>
       <AppHeader />
       <slot />
