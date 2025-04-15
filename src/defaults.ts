@@ -3,6 +3,7 @@ import { pick } from './runtime/utils';
 export const defaultOptions = {
   prefix: 'Z',
   fonts: true,
+  colorMode: true,
 };
 
 export const getDefaultUiConfig = (colors?: string[]) => ({

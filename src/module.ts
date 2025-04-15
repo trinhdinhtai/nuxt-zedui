@@ -30,6 +30,13 @@ export interface ModuleOptions {
   fonts?: boolean;
 
   /**
+   * Enable or disable `@nuxtjs/color-mode` module
+   * @defaultValue `true`
+   * @link https://ui.nuxt.com/getting-started/installation/nuxt#colormode
+   */
+  colorMode?: boolean;
+
+  /**
    * Customize how the theme is generated
    * @link https://ui.nuxt.com/getting-started/theme
    */
@@ -115,6 +122,19 @@ export default defineNuxtModule<ModuleOptions>({
         'fonts',
         {
           experimental: { processCSSVariables: true },
+        },
+        nuxt.options
+      );
+    }
+
+    // Install module @nuxtjs/color-mode
+    if (options.colorMode) {
+      await registerModule(
+        '@nuxtjs/color-mode',
+        'colorMode',
+        {
+          classSuffix: '',
+          disableTransition: true,
         },
         nuxt.options
       );
