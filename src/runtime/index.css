@@ -1,8 +1,8 @@
-@import 'tailwindcss';
-
 @import './keyframe.css';
 
 @source "./components/**/*.{ts,tsx}";
+
+@plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
