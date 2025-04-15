@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '../../../src/runtime';
+@import '../../../../src/runtime/';
 
 @theme static {
   --font-sans: 'Inter', sans-serif;

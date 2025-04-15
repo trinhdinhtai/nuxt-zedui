@@ -15,5 +15,6 @@ export default createConfigForNuxt({
     '@typescript-eslint/no-empty-object-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/require-default-prop': 'off',
   },
 });
