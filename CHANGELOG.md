@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.15](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.14...v0.0.15) (2025-04-15)
+
+### Features
+
+* add tailwindcss-animate package and update CSS imports for enhanced animation support; remove unused theme files to streamline codebase ([4eb4558](https://github.com/trinhdinhtai/nuxt-zedui/commit/4eb4558492ea4270255b5dec071437323a646d68))
+
 ## [0.0.14](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.13...v0.0.14) (2025-04-15)
 
 ## [0.0.13](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.12...v0.0.13) (2025-04-15)
