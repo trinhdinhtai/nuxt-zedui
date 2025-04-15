@@ -1,31 +1,58 @@
 <script setup lang="ts">
-const items = [
-  {
-    title: 'Home',
-    url: '#',
-    iconName: 'i-lucide-home',
-  },
-  {
-    title: 'Inbox',
-    url: '#',
-    iconName: 'i-lucide-inbox',
-  },
-  {
-    title: 'Calendar',
-    url: '#',
-    iconName: 'i-lucide-calendar',
-  },
-  {
-    title: 'Search',
-    url: '#',
-    iconName: 'i-lucide-search',
-  },
-  {
-    title: 'Settings',
-    url: '#',
-    iconName: 'i-lucide-settings',
-  },
+const components = [
+  'accordion',
+  'alert',
+  'avatar',
+  'badge',
+  'breadcrumb',
+  'button',
+  'button-group',
+  'card',
+  'calendar',
+  'carousel',
+  'checkbox',
+  'chip',
+  'collapsible',
+  'color-picker',
+  'context-menu',
+  'command-palette',
+  'drawer',
+  'dropdown-menu',
+  'form',
+  'form-field',
+  'input',
+  'input-menu',
+  'input-number',
+  'kbd',
+  'link',
+  'modal',
+  'navigation-menu',
+  'pagination',
+  'pin-input',
+  'popover',
+  'progress',
+  'radio-group',
+  'select',
+  'select-menu',
+  'separator',
+  'shortcuts',
+  'skeleton',
+  'slideover',
+  'slider',
+  'stepper',
+  'switch',
+  'tabs',
+  'table',
+  'textarea',
+  'toast',
+  'tooltip',
+  'tree',
 ];
+
+const items = components.map((component) => ({
+  title: component,
+  url: `/components/${component}`,
+}));
 </script>
 
 <template>
@@ -36,8 +63,7 @@ const items = [
           <ZSidebarMenuItem v-for="item in items" :key="item.title">
             <ZSidebarMenuButton asChild>
               <a :href="item.url">
-                <ZIcon :name="item.iconName" class="size-4" />
-                <span>{{ item.title }}</span>
+                <span class="capitalize">{{ item.title }}</span>
               </a>
             </ZSidebarMenuButton>
           </ZSidebarMenuItem>
