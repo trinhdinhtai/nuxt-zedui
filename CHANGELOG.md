@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.0.11](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.10...v0.0.11) (2025-04-15)
+
 ## [0.0.10](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.9...v0.0.10) (2025-04-15)
 
 ### Features
