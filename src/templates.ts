@@ -67,7 +67,7 @@ export function getTemplates(
         }
 
         // For local development, import directly from theme
-        const isUiDev = true;
+        const isUiDev = false;
         if (isUiDev) {
           const templatePath = fileURLToPath(
             new URL(`./theme/${kebabCase(component)}`, import.meta.url)
