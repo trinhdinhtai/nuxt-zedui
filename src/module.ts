@@ -10,7 +10,7 @@ import {
 } from '@nuxt/kit';
 import { name, version } from '../package.json';
 import { defaultOptions, getDefaultUiConfig } from './defaults';
-import { addTemplates } from './templates';
+// import { addTemplates } from './templates';
 import type { NuxtOptions } from 'nuxt/schema';
 
 // Module options TypeScript interface definition
@@ -121,6 +121,6 @@ export default defineNuxtModule<ModuleOptions>({
       pathPrefix: false,
     });
 
-    addTemplates(options, nuxt, resolve);
+    // addTemplates(options, nuxt, resolve);
   },
 });
