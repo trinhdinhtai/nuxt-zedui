@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.12](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.11...v0.0.12) (2025-04-15)
+
+### Features
+
+* enable local development template imports for improved UI component testing ([50d5641](https://github.com/trinhdinhtai/nuxt-zedui/commit/50d56417a34b162fef2662da941243cef3c363e7))
+* refactor button component to simplify variants and enhance styling; add new ui.css and index.ts files for improved theming ([b94960c](https://github.com/trinhdinhtai/nuxt-zedui/commit/b94960cbe5a57cd48b9876506fab388ee1ca2a97))
+
+### Bug Fixes
+
+* update comment for local development template imports to improve clarity ([cd88df8](https://github.com/trinhdinhtai/nuxt-zedui/commit/cd88df8a29b3bdf283c23e993d8ff8474e769d39))
+
 ## [0.0.11](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.10...v0.0.11) (2025-04-15)
 
 ## [0.0.10](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.9...v0.0.10) (2025-04-15)
