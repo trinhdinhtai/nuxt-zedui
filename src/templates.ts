@@ -66,7 +66,7 @@ export function getTemplates(
           });
         }
 
-        For local development, import directly from theme
+        // For local development, import directly from theme
         const isUiDev = true;
         if (isUiDev) {
           const templatePath = fileURLToPath(
