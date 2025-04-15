@@ -100,7 +100,15 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.postcss.plugins['@tailwindcss/postcss'] = {};
     }
 
-    // Cài đặt module @nuxt/fonts
+    // Install module @nuxt/icon
+    await registerModule(
+      '@nuxt/icon',
+      'icon',
+      { cssLayer: 'components' },
+      nuxt.options
+    );
+
+    // Install module @nuxt/fonts
     if (options.fonts) {
       await registerModule(
         '@nuxt/fonts',
