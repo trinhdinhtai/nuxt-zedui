@@ -1,5 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <slot />
+  <ZSidebarProvider default-open>
+    <ZSidebarInset>
+      <AppHeader />
+      <slot />
+    </ZSidebarInset>
+  </ZSidebarProvider>
 </template>
