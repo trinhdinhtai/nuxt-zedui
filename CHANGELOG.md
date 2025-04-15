@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.13](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.12...v0.0.13) (2025-04-15)
+
+### Features
+
+* add custom dark variant and theme variables to templates for enhanced theming support ([7e35d40](https://github.com/trinhdinhtai/nuxt-zedui/commit/7e35d40b6b13a9a4a69445c0442056ff1c6a6664))
+
+### Bug Fixes
+
+* disable local development mode for template imports to ensure production consistency ([6663358](https://github.com/trinhdinhtai/nuxt-zedui/commit/66633587e58a2e5d3ef8d504de6eba8580c79489))
+
 ## [0.0.12](https://github.com/trinhdinhtai/nuxt-zedui/compare/v0.0.11...v0.0.12) (2025-04-15)
 
 ### Features
