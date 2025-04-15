@@ -5,7 +5,7 @@
     <div>
       <h2 class="text-lg font-bold mb-2">Module Buttons</h2>
       <div class="flex gap-2">
-        <ZButton>Default Button</ZButton>
+        <ZButton class="bg-red-500">Default Button</ZButton>
         <ZButton variant="outline">Outline Button</ZButton>
         <ZButton variant="destructive">Destructive Button</ZButton>
         <ZButton variant="ghost">Ghost Button</ZButton>
