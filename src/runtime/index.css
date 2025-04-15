@@ -125,6 +125,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Add cursor pointer to buttons */
+  button:not([disabled]),
+  [role='button']:not([disabled]) {
+    cursor: pointer;
+  }
 }
 
 /* Remove the default password reveal eye icon in the password field for Microsoft Edge */
