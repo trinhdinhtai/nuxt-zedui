@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import imageUrl from '~/assets/images/logo.png';
+import { splitByCase, upperFirst } from 'scule';
 
 const components = [
   'accordion',
   'alert',
+  'alert-dialog',
+  'aspect-ratio',
   'avatar',
   'badge',
   'breadcrumb',
   'button',
-  'button-group',
   'card',
   'calendar',
   'carousel',
@@ -52,9 +54,15 @@ const components = [
 ];
 
 const items = components.map((component) => ({
-  title: component,
+  title: upperName(component),
   url: `/components/${component}`,
 }));
+
+function upperName(name: string) {
+  return splitByCase(name)
+    .map((p) => upperFirst(p))
+    .join('');
+}
 </script>
 
 <template>
