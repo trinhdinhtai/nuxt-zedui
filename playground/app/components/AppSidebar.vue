@@ -11,19 +11,16 @@ const components = [
   'badge',
   'breadcrumb',
   'button',
-  'card',
   'calendar',
+  'card',
   'carousel',
   'checkbox',
-  'chip',
   'collapsible',
-  'color-picker',
   'context-menu',
-  'command-palette',
+  'command',
   'drawer',
   'dropdown-menu',
   'form',
-  'form-field',
   'input',
   'input-menu',
   'input-number',
@@ -53,7 +50,7 @@ const components = [
   'tree',
 ];
 
-const items = components.map((component) => ({
+const items = components.sort().map((component) => ({
   title: upperName(component),
   url: `/components/${component}`,
 }));

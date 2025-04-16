@@ -20,7 +20,7 @@ const range = ref({
 </script>
 
 <template>
-  <div class="flex flex-col flex-wrap items-start gap-2 @md:flex-row">
+  <div class="flex flex-col flex-wrap items-start gap-4 md:flex-row">
     <ZCalendar v-model="date" class="rounded-md border shadow-sm" />
 
     <ZRangeCalendar
@@ -32,7 +32,7 @@ const range = ref({
 
     <ZRangeCalendar
       v-model="range"
-      class="hidden rounded-md border shadow-sm @4xl:block"
+      class="hidden rounded-md border shadow-sm 2xl:block"
       :number-of-months="3"
     />
   </div>
