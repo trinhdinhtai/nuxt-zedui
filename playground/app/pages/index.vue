@@ -43,6 +43,14 @@
         </ZDialogFooter>
       </ZDialogContent>
     </ZDialog>
+
+    <ZAlert>
+      <ZIcon name="i-lucide-circle-check" />
+      <ZAlertTitle>Alert Title</ZAlertTitle>
+      <ZAlertDescription>
+        This is an alert with icon, title and description.
+      </ZAlertDescription>
+    </ZAlert>
   </div>
 </template>
 
