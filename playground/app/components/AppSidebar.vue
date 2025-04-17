@@ -23,7 +23,7 @@ const components = [
   'form',
   'input',
   'input-otp',
-  'modal',
+  'label',
   'navigation-menu',
   'pagination',
   'pin-input',

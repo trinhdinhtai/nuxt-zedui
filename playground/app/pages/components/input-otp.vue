@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <ComponentWrapper name="OTP Input">
+  <ComponentWrapper name="Input OTP">
     <LazyInputOTPDemo />
   </ComponentWrapper>
 </template>
