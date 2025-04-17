@@ -31,6 +31,7 @@ const components = [
   'progress',
   'radio-group',
   'resizable',
+  'scroll-area',
   'select',
   'separator',
   'sheet',
