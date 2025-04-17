@@ -41,11 +41,13 @@ const components = [
   'stepper',
   'switch',
   'tabs',
+  'tags-input',
   'table',
   'textarea',
+  'toggle',
+  'toggle-group',
   'toast',
   'tooltip',
-  'tree',
 ];
 
 const items = components.sort().map((component) => ({
