@@ -24,6 +24,7 @@ const components = [
   'input',
   'input-otp',
   'label',
+  'menubar',
   'navigation-menu',
   'pagination',
   'pin-input',
