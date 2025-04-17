@@ -1,8 +1,11 @@
 {
   "name": "@trinhdinhtai/zed-ui",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "My new Nuxt module",
-  "repository": "trinhdinhtai/nuxt-zedui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trinhdinhtai/nuxt-zedui.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
