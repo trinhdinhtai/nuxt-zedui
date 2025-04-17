@@ -37,7 +37,7 @@ const forwarded = useForwardProps(delegatedProps);
   >
     <slot>
       <span class="hidden sm:block">Last</span>
-      <ChevronRightIcon />
+      <ChevronRightIcon class="size-4" />
     </slot>
   </PaginationLast>
 </template>
