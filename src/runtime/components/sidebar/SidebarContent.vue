@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue';
 import { cn } from '../../libs/cn';
+import { ScrollArea } from '../scroll-area';
 
 const props = defineProps<{
   class?: HTMLAttributes['class'];
@@ -8,7 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div
+  <ScrollArea
     data-sidebar="content"
     :class="
       cn(
@@ -18,5 +19,5 @@ const props = defineProps<{
     "
   >
     <slot />
-  </div>
+  </ScrollArea>
 </template>

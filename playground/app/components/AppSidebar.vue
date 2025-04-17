@@ -18,6 +18,7 @@ const components = [
   'collapsible',
   'context-menu',
   'command',
+  'dialog',
   'drawer',
   'dropdown-menu',
   'form',
@@ -75,7 +76,7 @@ function upperName(name: string) {
       <ZSidebarGroup>
         <ZSidebarMenu>
           <ZSidebarMenuItem v-for="item in items" :key="item.title">
-            <ZSidebarMenuButton asChild>
+            <ZSidebarMenuButton as-child>
               <a :href="item.url">
                 <span class="capitalize">{{ item.title }}</span>
               </a>

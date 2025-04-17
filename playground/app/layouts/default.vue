@@ -5,7 +5,7 @@
     <AppSidebar />
     <ZSidebarInset>
       <AppHeader />
-      <div class="grid flex-1 gap-4 p-4">
+      <div class="flex-1 gap-4 p-4">
         <slot />
       </div>
     </ZSidebarInset>
