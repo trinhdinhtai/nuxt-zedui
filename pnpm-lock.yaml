@@ -121,33 +121,6 @@ importers:
         specifier: ^2.2.8
         version: 2.2.8(typescript@5.8.3)
 
-  playground:
-    dependencies:
-      '@trinhdinhtai/zed-ui':
-        specifier: ^0.0.6
-        version: 0.0.6(magicast@0.3.5)
-      '@vee-validate/zod':
-        specifier: ^4.15.0
-        version: 4.15.0(vue@3.5.13(typescript@5.8.3))(zod@3.24.3)
-      date-fns:
-        specifier: ^4.1.0
-        version: 4.1.0
-      nuxt:
-        specifier: ^3.16.2
-        version: 3.16.2(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(meow@13.2.0)(optionator@0.9.4)(rollup@4.39.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))(vue-tsc@2.2.8(typescript@5.8.3))(yaml@2.7.1)
-      scule:
-        specifier: ^1.3.0
-        version: 1.3.0
-      vee-validate:
-        specifier: ^4.15.0
-        version: 4.15.0(vue@3.5.13(typescript@5.8.3))
-      vue-sonner:
-        specifier: ^1.3.2
-        version: 1.3.2
-      zod:
-        specifier: ^3.24.2
-        version: 3.24.3
-
 packages:
 
   '@alloc/quick-lru@5.2.0':
@@ -1433,9 +1406,6 @@ packages:
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
 
-  '@trinhdinhtai/zed-ui@0.0.6':
-    resolution: {integrity: sha512-R5xgIbOA/EUQuJMLuJxKCGMJW4Bs5mhnCxncQ5d3jMY9oRzcHXatcqmVnVSl5ybvqRgNCWjoqLXVd0O8x41PkA==}
-
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
@@ -1599,11 +1569,6 @@ packages:
     resolution: {integrity: sha512-hVXaObGI2lGFmrtT77KSbPQ3I+zk9IU500wobjk0+oX59vg/0VqAzABNtt3YSQYgXTC2a/LYxekLfND/wlt0yQ==}
     cpu: [x64]
     os: [win32]
-
-  '@vee-validate/zod@4.15.0':
-    resolution: {integrity: sha512-MpvIKiyg9X5yD8bJW0no2AU7wtR2T5mrvD9tuPRiie951sU2n6QKgMV38qKKOiqFBCxsMSjIuLLLV3V5kVE4nQ==}
-    peerDependencies:
-      zod: ^3.24.0
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
@@ -2321,9 +2286,6 @@ packages:
   data-uri-to-buffer@6.0.2:
     resolution: {integrity: sha512-7hvf7/GW8e86rW0ptuwS3OcBGDjIi6SZva7hCyWC0yYry2cOPmLIjXAUHI6DK2HsnwJd9ifmt57i8eV2n4YNpw==}
     engines: {node: '>= 14'}
-
-  date-fns@4.1.0:
-    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   db0@0.3.1:
     resolution: {integrity: sha512-3RogPLE2LLq6t4YiFCREyl572aBjkfMvfwPyN51df00TbPbryL3XqBYuJ/j6mgPssPK8AKfYdLxizaO5UG10sA==}
@@ -5182,9 +5144,6 @@ packages:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
     engines: {node: '>= 14'}
 
-  zod@3.24.3:
-    resolution: {integrity: sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==}
-
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
@@ -6652,12 +6611,6 @@ snapshots:
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
-  '@trinhdinhtai/zed-ui@0.0.6(magicast@0.3.5)':
-    dependencies:
-      '@nuxt/kit': 3.16.2(magicast@0.3.5)
-    transitivePeerDependencies:
-      - magicast
-
   '@trysound/sax@0.2.0': {}
 
   '@tybys/wasm-util@0.9.0':
@@ -6816,14 +6769,6 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.4.1':
     optional: true
-
-  '@vee-validate/zod@4.15.0(vue@3.5.13(typescript@5.8.3))(zod@3.24.3)':
-    dependencies:
-      type-fest: 4.39.1
-      vee-validate: 4.15.0(vue@3.5.13(typescript@5.8.3))
-      zod: 3.24.3
-    transitivePeerDependencies:
-      - vue
 
   '@vercel/nft@0.29.2(rollup@4.39.0)':
     dependencies:
@@ -7691,8 +7636,6 @@ snapshots:
   csstype@3.1.3: {}
 
   data-uri-to-buffer@6.0.2: {}
-
-  date-fns@4.1.0: {}
 
   db0@0.3.1: {}
 
@@ -10787,5 +10730,3 @@ snapshots:
       archiver-utils: 5.0.2
       compress-commons: 6.0.2
       readable-stream: 4.7.0
-
-  zod@3.24.3: {}
