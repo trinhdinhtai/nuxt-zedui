@@ -101,7 +101,7 @@ const activeFormTab = ref('login');
               <span class="text-green-500">'vue'</span
               ><span class="text-slate-400">;</span>
             </div>
-            <div class="h-4"></div>
+            <div class="h-4" />
             <div class="flex gap-2">
               <span class="text-purple-500">const</span>
               <span class="text-blue-500">count</span>
@@ -111,7 +111,7 @@ const activeFormTab = ref('login');
               ><span class="text-orange-500">0</span
               ><span class="text-slate-400">);</span>
             </div>
-            <div class="h-4"></div>
+            <div class="h-4" />
             <div class="flex gap-2">
               <span class="text-purple-500">function</span>
               <span class="text-blue-600">increment</span
@@ -137,7 +137,7 @@ const activeFormTab = ref('login');
               <span class="text-green-500">'react'</span
               ><span class="text-slate-400">;</span>
             </div>
-            <div class="h-4"></div>
+            <div class="h-4" />
             <div class="flex gap-2">
               <span class="text-purple-500">function</span>
               <span class="text-blue-600">Counter</span
@@ -156,7 +156,7 @@ const activeFormTab = ref('login');
               ><span class="text-orange-500">0</span
               ><span class="text-slate-400">);</span>
             </div>
-            <div class="h-4"></div>
+            <div class="h-4" />
             <div class="ml-4 flex gap-2">
               <span class="text-purple-500">return</span>
               <span class="text-slate-400">(</span>
@@ -203,7 +203,7 @@ const activeFormTab = ref('login');
               <span class="text-green-500">'@angular/core'</span
               ><span class="text-slate-400">;</span>
             </div>
-            <div class="h-4"></div>
+            <div class="h-4" />
             <div>
               <span class="text-pink-500">@Component</span
               ><span class="text-slate-400">({</span>
@@ -243,7 +243,7 @@ const activeFormTab = ref('login');
             <div>
               <span class="text-slate-400">})</span>
             </div>
-            <div class="h-2"></div>
+            <div class="h-2" />
             <div class="flex gap-2">
               <span class="text-purple-500">export</span>
               <span class="text-purple-500">class</span>
@@ -256,7 +256,7 @@ const activeFormTab = ref('login');
               <span class="text-orange-500">0</span
               ><span class="text-slate-400">;</span>
             </div>
-            <div class="h-4"></div>
+            <div class="h-4" />
             <div class="ml-4">
               <span class="text-blue-600">increment</span
               ><span class="text-slate-400">() {</span>
