@@ -27,7 +27,6 @@ const components = [
   'menubar',
   'navigation-menu',
   'pagination',
-  'pin-input',
   'popover',
   'progress',
   'radio-group',
