@@ -30,6 +30,13 @@ export interface ModuleOptions {
   fonts?: boolean;
 
   /**
+   * Enable or disable `@nuxtjs/color-mode` module
+   * @defaultValue `true`
+   * @link https://ui.nuxt.com/getting-started/installation/nuxt#colormode
+   */
+  colorMode?: boolean;
+
+  /**
    * Customize how the theme is generated
    * @link https://ui.nuxt.com/getting-started/theme
    */
@@ -100,13 +107,34 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.postcss.plugins['@tailwindcss/postcss'] = {};
     }
 
-    // Cài đặt module @nuxt/fonts
+    // Install module @nuxt/icon
+    await registerModule(
+      '@nuxt/icon',
+      'icon',
+      { cssLayer: 'components' },
+      nuxt.options
+    );
+
+    // Install module @nuxt/fonts
     if (options.fonts) {
       await registerModule(
         '@nuxt/fonts',
         'fonts',
         {
           experimental: { processCSSVariables: true },
+        },
+        nuxt.options
+      );
+    }
+
+    // Install module @nuxtjs/color-mode
+    if (options.colorMode) {
+      await registerModule(
+        '@nuxtjs/color-mode',
+        'colorMode',
+        {
+          classSuffix: '',
+          disableTransition: true,
         },
         nuxt.options
       );
