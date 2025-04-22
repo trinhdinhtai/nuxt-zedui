@@ -1,5 +1,6 @@
 // @ts-check
-import { createConfigForNuxt } from '@nuxt/eslint-config/flat';
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
+import prettierPlugin from 'eslint-plugin-prettier'
 
 // Run `npx @eslint/config-inspector` to inspect the resolved config interactively
 export default createConfigForNuxt({
@@ -18,4 +19,7 @@ export default createConfigForNuxt({
     'vue/require-default-prop': 'off',
     'vue/html-self-closing': 'off',
   },
-});
+  plugins: {
+    prettier: prettierPlugin,
+  },
+})

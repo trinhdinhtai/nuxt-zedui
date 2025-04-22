@@ -1,4 +1,4 @@
-import { defu } from 'defu';
+import { defu } from 'defu'
 import {
   defineNuxtModule,
   addPlugin,
@@ -7,11 +7,11 @@ import {
   addVitePlugin,
   installModule,
   hasNuxtModule,
-} from '@nuxt/kit';
-import { name, version } from '../package.json';
-import { defaultOptions, getDefaultUiConfig } from './defaults';
+} from '@nuxt/kit'
+import { name, version } from '../package.json'
+import { defaultOptions, getDefaultUiConfig } from './defaults'
 // import { addTemplates } from './templates';
-import type { NuxtOptions } from 'nuxt/schema';
+import type { NuxtOptions } from 'nuxt/schema'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -20,21 +20,21 @@ export interface ModuleOptions {
    * @defaultValue `U`
    * @link https://ui.nuxt.com/getting-started/installation/nuxt#prefix
    */
-  prefix?: string;
+  prefix?: string
 
   /**
    * Enable or disable `@nuxt/fonts` module
    * @defaultValue `true`
    * @link https://ui.nuxt.com/getting-started/installation/nuxt#fonts
    */
-  fonts?: boolean;
+  fonts?: boolean
 
   /**
    * Enable or disable `@nuxtjs/color-mode` module
    * @defaultValue `true`
    * @link https://ui.nuxt.com/getting-started/installation/nuxt#colormode
    */
-  colorMode?: boolean;
+  colorMode?: boolean
 
   /**
    * Customize how the theme is generated
@@ -46,15 +46,15 @@ export interface ModuleOptions {
      * @defaultValue `['primary', 'secondary', 'success', 'info', 'warning', 'error']`
      * @link https://ui.nuxt.com/getting-started/installation/nuxt#themecolors
      */
-    colors?: string[];
+    colors?: string[]
 
     /**
      * Enable or disable transitions on components
      * @defaultValue `true`
      * @link https://ui.nuxt.com/getting-started/installation/nuxt#themetransitions
      */
-    transitions?: boolean;
-  };
+    transitions?: boolean
+  }
 }
 
 async function registerModule(
@@ -64,9 +64,9 @@ async function registerModule(
   nuxtOptions: NuxtOptions
 ) {
   if (!hasNuxtModule(name)) {
-    await installModule(name, options);
+    await installModule(name, options)
   } else {
-    (nuxtOptions as any)[key] = defu((nuxtOptions as any)[key], options);
+    ;(nuxtOptions as any)[key] = defu((nuxtOptions as any)[key], options)
   }
 }
 
@@ -79,9 +79,9 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: defaultOptions,
   async setup(options, nuxt) {
-    const { resolve } = createResolver(import.meta.url);
+    const { resolve } = createResolver(import.meta.url)
 
-    options.theme = options.theme || {};
+    options.theme = options.theme || {}
     options.theme.colors = [
       'primary',
       'secondary',
@@ -89,22 +89,22 @@ export default defineNuxtModule<ModuleOptions>({
       'info',
       'warning',
       'error',
-    ];
+    ]
 
     // Lưu trữ các tùy chọn của module vào nuxt.options
     // User có thể override các tùy chọn này trong nuxt.config.ts
-    nuxt.options.zedUI = options;
+    nuxt.options.zedUI = options
 
     nuxt.options.appConfig.ui = defu(
       nuxt.options.appConfig.ui || {},
       getDefaultUiConfig(options.theme.colors)
-    );
+    )
 
     if (nuxt.options.builder === '@nuxt/vite-builder') {
-      const plugin = await import('@tailwindcss/vite').then((r) => r.default);
-      addVitePlugin(plugin());
+      const plugin = await import('@tailwindcss/vite').then(r => r.default)
+      addVitePlugin(plugin())
     } else {
-      nuxt.options.postcss.plugins['@tailwindcss/postcss'] = {};
+      nuxt.options.postcss.plugins['@tailwindcss/postcss'] = {}
     }
 
     // Install module @nuxt/icon
@@ -113,7 +113,7 @@ export default defineNuxtModule<ModuleOptions>({
       'icon',
       { cssLayer: 'components' },
       nuxt.options
-    );
+    )
 
     // Install module @nuxt/fonts
     if (options.fonts) {
@@ -124,7 +124,7 @@ export default defineNuxtModule<ModuleOptions>({
           experimental: { processCSSVariables: true },
         },
         nuxt.options
-      );
+      )
     }
 
     // Install module @nuxtjs/color-mode
@@ -137,18 +137,18 @@ export default defineNuxtModule<ModuleOptions>({
           disableTransition: true,
         },
         nuxt.options
-      );
+      )
     }
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolve('./runtime/plugin'));
+    addPlugin(resolve('./runtime/plugin'))
 
     addComponentsDir({
       path: resolve('./runtime/components'),
       prefix: options.prefix,
       pathPrefix: false,
-    });
+    })
 
     // addTemplates(options, nuxt, resolve);
   },
-});
+})

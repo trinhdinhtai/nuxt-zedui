@@ -80,6 +80,7 @@
     "@types/node": "latest",
     "changelogen": "^0.6.1",
     "eslint": "^9.24.0",
+    "eslint-plugin-prettier": "^5.2.6",
     "nuxt": "^3.16.2",
     "release-it": "^18.1.2",
     "typescript": "~5.8.3",
