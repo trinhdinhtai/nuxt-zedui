@@ -7,6 +7,7 @@ import {
   addVitePlugin,
   installModule,
   hasNuxtModule,
+  addImportsDir,
 } from '@nuxt/kit'
 import { name, version } from '../package.json'
 import { defaultOptions, getDefaultUiConfig } from './defaults'
@@ -148,6 +149,9 @@ export default defineNuxtModule<ModuleOptions>({
       prefix: options.prefix,
       pathPrefix: false,
     })
+
+    // Add composables
+    addImportsDir(resolve('./runtime/composables'))
 
     // addTemplates(options, nuxt, resolve);
   },

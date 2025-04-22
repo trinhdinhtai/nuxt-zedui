@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import imageUrl from '~/assets/images/logo.png';
-import { splitByCase, upperFirst } from 'scule';
+import imageUrl from '~/assets/images/logo.png'
+import { splitByCase, upperFirst } from 'scule'
 
 const components = [
   'accordion',
@@ -49,17 +49,59 @@ const components = [
   'toggle-group',
   'toast',
   'tooltip',
-];
+]
 
-const items = components.sort().map((component) => ({
+const platforms = [
+  {
+    title: 'Playground',
+    url: '#',
+    iconName: 'i-lucide-square-terminal',
+    isActive: true,
+    items: [
+      {
+        title: 'Theme',
+        url: '/playground/theme',
+      },
+      {
+        title: 'Role',
+        url: '/playground/role',
+      },
+    ],
+  },
+  {
+    title: 'Documentation',
+    url: '#',
+    iconName: 'i-lucide-book-open',
+    items: [
+      {
+        title: 'Introduction',
+        url: '#',
+      },
+      {
+        title: 'Get Started',
+        url: '#',
+      },
+      {
+        title: 'Tutorials',
+        url: '#',
+      },
+      {
+        title: 'Changelog',
+        url: '#',
+      },
+    ],
+  },
+]
+
+const items = components.sort().map(component => ({
   title: upperName(component),
   url: `/components/${component}`,
-}));
+}))
 
 function upperName(name: string) {
   return splitByCase(name)
-    .map((p) => upperFirst(p))
-    .join('');
+    .map(p => upperFirst(p))
+    .join('')
 }
 </script>
 
@@ -74,6 +116,47 @@ function upperName(name: string) {
 
     <ZSidebarContent>
       <ZSidebarGroup>
+        <ZSidebarGroupLabel>Platform</ZSidebarGroupLabel>
+        <ZSidebarMenu>
+          <ZCollapsible
+            v-for="item in platforms"
+            :key="item.title"
+            as-child
+            :default-open="item?.isActive"
+            class="group/collapsible"
+          >
+            <ZSidebarMenuItem>
+              <ZCollapsibleTrigger as-child>
+                <ZSidebarMenuButton :tooltip="item.title">
+                  <ZIcon v-if="item.iconName" :name="item.iconName" />
+                  <span>{{ item.title }}</span>
+                  <ZIcon
+                    name="i-lucide-chevron-right"
+                    class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+                  />
+                </ZSidebarMenuButton>
+              </ZCollapsibleTrigger>
+              <ZCollapsibleContent>
+                <ZSidebarMenuSub>
+                  <ZSidebarMenuSubItem
+                    v-for="subItem in item.items"
+                    :key="subItem.title"
+                  >
+                    <ZSidebarMenuSubButton as-child>
+                      <NuxtLink :to="subItem.url">
+                        <span>{{ subItem.title }}</span>
+                      </NuxtLink>
+                    </ZSidebarMenuSubButton>
+                  </ZSidebarMenuSubItem>
+                </ZSidebarMenuSub>
+              </ZCollapsibleContent>
+            </ZSidebarMenuItem>
+          </ZCollapsible>
+        </ZSidebarMenu>
+      </ZSidebarGroup>
+
+      <ZSidebarGroup>
+        <ZSidebarGroupLabel>Components</ZSidebarGroupLabel>
         <ZSidebarMenu>
           <ZSidebarMenuItem v-for="item in items" :key="item.title">
             <ZSidebarMenuButton as-child>
